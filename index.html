@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="portfolio.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link href="https://fonts.googleapis.com/css?family=Work+Sans|Maven+Pro" rel="stylesheet">
+<title>Portfolio Ryan</title>
+</head>
+
+<body>
+<div id='navbar'>
+<nav class='navbar navbar-inverse navbar-collapse'>
+	<div class="navbar-header">
+		<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-chevron-right"></span> Ryan</a>
+			<ul class="nav navbar-nav">
+				<li><a href="information.html">Information</a></li>
+				<li><a href="galery.html">Gallery</a></li>
+				<li><a href="work.html">Work</a></li>
+				<li><a href="hobbies.html">Hobbies</a></li>
+				<li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+<ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Refresh</a></li>
+            <li><a href="#">Waddup</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="https://www.truckersmp.com">TruckersMP</a></li>
+          </ul>
+            </li>
+          </ul>
+        </div>
+    </nav>
+</div>
+
+
+
+<div class="main">
+<header>
+    <div class="header-inner text-center">
+        <a href="contact.html" class="btn btn-primary"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Get in contact</a>
+    </div>
+</header>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+                <div class="thumbnail">
+                    <img src="img/thumbnail_1.png" width="242" height="150">
+                        <div class="caption">
+                            <h3>
+                            <span class="glyphicon glyphicon-thumbs-up" style="font-size: 17px"></span> Hobby</h3>
+                            <p>A big part of my life is sitting behind a screen - sad, but the truth. I enjoy doing creative things like coding or photoshop, but gaming is also something I spend a lot of time on.</p>
+                        </div>
+                    </div>
+                </div>
+
+<div class="col-md-4">
+    <div class="thumbnail">
+        <img src="img/thumbnail_2.png" width="242" height="200">
+            <div class="caption">
+                <h3><span class="glyphicon glyphicon-user" style="font-size: 17px"></span> About me</h3>
+                <p>My name is Ryan, or rekoil_ on the internet. I'm 17 years old and am still participating high school. Once I finish high school I want to do coding on university.</p>
+            </div>
+        </div>
+    </div>
+
+<div class="col-md-4">
+    <div class="thumbnail">
+        <img src="img/thumbnail_3.png" width="242" height="200">
+            <div class="caption">
+                <h3><span class="glyphicon glyphicon-globe" style="font-size: 17px"></span> Internet</h3>
+                <p>I'm currently also one of the 4 Community Managers for <a href="https://www.truckersmp.com/">TruckersMP</a>. I am responsible for social media and the forum, but I have other duties aswell inside TruckersMP.</p>
+           </div>
+         </div>
+       </div>
+     </div>
+    </div>
+  </div>
+</div>
+
+
+<div align="center">
+    <h1>TruckersMP Server Status</h1>
+    </div>
+    <div class="container" id="app">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="servers list-unstyled">
+                    <li class='col-md-4 animated fadeInUp' v-for="server in servers">
+                        <div class='panel panel-default'>
+                            <div class='panel-heading'>
+                                <i class='glyphicon glyphicon-globe' aria-hidden="true"></i>&nbsp;{{ server.shortname }}
+                                <br>
+                                <i class='glyphicon glyphicon-ok-sign' aria-hidden="true" v-if="server.online ==='Online'"></i>
+                                <i class='glyphicon glyphicon-remove-sign' aria-hidden="true" v-if="server.online ===' Offline'"></i>{{ server.online }}
+                                <br>
+                                <i class='glyphicon glyphicon-road'></i>&nbsp;{{ server.game }}
+                                
+                                
+                            </div>
+                            <ul class='list-group'>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" :aria-valuenow="server.players" aria-valuemin="0" :aria-valuemax="server.maxplayers" :style="{ width: server.players_percent + '%' }">
+                                        <span class="sr-only">0% Complete</span>
+                                    </div>
+                                </div>
+                                <li class='list-group-item'><span class='label label-info label-as-badge'>{{ server.players }}</span>Players online:</li>
+                                <li class='list-group-item'><span class='label label-info label-as-badge'>{{ server.maxplayers }}</span>Maximum playercount:</li>
+                                <li class='list-group-item'><span class='label label-info label-as-badge'>{{ server.name }}</span>Server Name:</li>
+                                <li class='list-group-item'><span class='label label-info label-as-badge'>{{ server.queue }}</span>Players in queue:</li>
+                                <li class='list-group-item'><span class='label label-info label-as-badge'>{{ server.speedlimiter }}</span>Speedlimiter:</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>             
+            </div>
+        </div>
+        
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/jquery@3.1.1"></script>
+<script src="https://vuejs.org/js/vue.js"></script>
+<script src="servers.js"></script>
+</body>
+</html>

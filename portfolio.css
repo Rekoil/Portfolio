@@ -1,0 +1,156 @@
+#navbar 
+{
+	position: fixed!important;
+	top: 0;
+    width: 100%;
+    margin: 0;
+    border-radius: 0px!important;
+    z-index: 100;
+}
+
+.navbar-brand, .nav a 
+{
+    transition: color 0.5s ease!important;
+    color: #d3d3d3!important;
+}
+
+.navbar-brand:hover, .nav a:hover
+{
+    transition: color 0.5s ease!important;
+    color: #E47D30!important;
+}
+
+.dropdown-menu 
+{
+    background: #272727!important;
+    display: none;
+}
+
+.dropdown:hover .dropdown-menu
+{
+    display: block;
+}
+
+.dropdown-menu:hover > li:hover > a:hover
+{
+    transition: color 0.5s ease!important;
+    background: #272727!important;
+}
+
+.main 
+{
+	margin-top: 50px;
+}
+
+header 
+{   
+    height: 400px;
+    background-image: url("C:/Coding/Portfolio/img/header.jpg");
+    background-position: center 580px;
+    position: relative;
+    border-bottom: solid #272727;
+}
+
+.header-inner > .btn
+{
+    margin: 150px auto!important;
+    transition: background-color 0.5s ease!important;
+    background: #E47D30!important;
+}
+
+.header-inner > .btn:hover 
+{      
+    transition: background-color 0.5s ease!important;
+    background: #b25900!important;
+}
+
+.thumbnail 
+{
+	width: 250px;
+	height: 400px;
+	display: inline-block;
+	background-color: #222222!important;
+	border-style: none!important;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.caption 
+{
+	color: white!important;
+}
+
+.col-md-4
+{
+    margin: 0 auto;
+    bottom: 50px;
+}
+
+.col-md-12
+{
+    top: 100px;
+}
+
+h1
+{
+   font-family: 'Maven Pro', sans-serif!important; 
+   color: #d1d1d1!important;
+}
+
+.panel-heading
+{
+    background: #171717!important;
+    color: white!important;
+}
+
+.list-group-item
+{
+    background: #1A1A1A!important;
+    color: white!important;
+}
+
+.label-as-badge 
+{
+    border-radius: 1em;
+    float: right!important;
+    font-size: .87em!important;
+    transition: background 0.5s ease!important;
+    background: #E47D30!important;
+}
+
+.label-as-badge:hover
+{
+    transition: background 0.5s ease!important;
+    background: #a35b28!important;
+}
+
+.progress
+{
+    border: none!important;
+    margin: 0!important;
+    padding: 0!important;
+    height: 7px!important;
+    background: #4c4c4c!important;
+}
+
+.progress-bar 
+{
+    transition: background 0.3s ease!important;
+    background: #E47D30!important;
+}
+
+.progress-bar:hover 
+{
+    transition: background 0.3s ease!important;
+    background: #a35b28!important;
+}
+
+.servers 
+{
+    padding-top: 10px!important;
+}
+
+html, body 
+{
+	background-color: #1a1a1a!important;
+} 
