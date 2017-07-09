@@ -84,7 +84,7 @@ header
 {
     margin: 0 auto;
     bottom: 50px;
-}
+
 
 .col-md-12
 {
@@ -152,5 +152,5 @@ h1
 
 html, body 
 {
-	background-color: #1a1a1a!important;
+	background-color: #1a1a1b!important;
 } 
